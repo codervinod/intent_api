@@ -76,7 +76,7 @@ func UnmarshalCloudCredentials(reader io.Reader, consumer runtime.Consumer) (Clo
 
 func unmarshalCloudCredentials(data []byte, consumer runtime.Consumer) (CloudCredentials, error) {
 	buf := bytes.NewBuffer(data)
-	buf2 := bytes.NewBuffer(data)
+	// buf2 := bytes.NewBuffer(data)
 
 	// the first time this is read is to fetch the value of the cloud_type property.
 	var getType struct {

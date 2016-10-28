@@ -11,7 +11,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/intent_api/models"
+	"github.com/codervinod/intent_api/models"
 )
 
 // GetUsersMeReader is a Reader for the GetUsersMe structure.

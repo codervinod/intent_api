@@ -4,10 +4,8 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	"encoding/json"
-	"strconv"
-
 	strfmt "github.com/go-openapi/strfmt"
+	"github.com/go-openapi/swag"
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/validate"
@@ -87,41 +85,10 @@ func (m *ClusterNetworkEntity) validateIPConfig(formats strfmt.Registry) error {
 	return nil
 }
 
-var clusterNetworkEntityProxyTypeItemsEnum []interface{}
-
-func (m *ClusterNetworkEntity) validateProxyTypeItemsEnum(path, location string, value string) error {
-	if clusterNetworkEntityProxyTypeItemsEnum == nil {
-		var res []string
-		if err := json.Unmarshal([]byte(`["HTTP","HTTPS","SOCKS"]`), &res); err != nil {
-			return err
-		}
-		for _, v := range res {
-			clusterNetworkEntityProxyTypeItemsEnum = append(clusterNetworkEntityProxyTypeItemsEnum, v)
-		}
-	}
-	if err := validate.Enum(path, location, value, clusterNetworkEntityProxyTypeItemsEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
 func (m *ClusterNetworkEntity) validateProxyType(formats strfmt.Registry) error {
 
 	if swag.IsZero(m.ProxyType) { // not required
 		return nil
-	}
-
-	for i := 0; i < len(m.ProxyType); i++ {
-
-		if swag.IsZero(m.ProxyType[i]) { // not required
-			continue
-		}
-
-		// value enum
-		if err := m.validateProxyTypeItemsEnum("proxy_type"+"."+strconv.Itoa(i), "body", *m.ProxyType[i]); err != nil {
-			return err
-		}
-
 	}
 
 	return nil

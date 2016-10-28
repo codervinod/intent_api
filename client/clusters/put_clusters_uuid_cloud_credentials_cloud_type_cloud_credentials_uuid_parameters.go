@@ -15,7 +15,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/intent_api/models"
+	"github.com/codervinod/intent_api/models"
 )
 
 // NewPutClustersUUIDCloudCredentialsCloudTypeCloudCredentialsUUIDParams creates a new PutClustersUUIDCloudCredentialsCloudTypeCloudCredentialsUUIDParams object

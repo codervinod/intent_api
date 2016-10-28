@@ -14,7 +14,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/intent_api/models"
+	"github.com/codervinod/intent_api/models"
 )
 
 // NewPostVolumeGroupSnapshotsListParams creates a new PostVolumeGroupSnapshotsListParams object

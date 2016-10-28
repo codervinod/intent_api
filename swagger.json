@@ -10324,12 +10324,6 @@
                 }, 
                 "proxy_type": {
                     "items": {
-                        "default": "HTTP", 
-                        "enum": [
-                            "HTTP", 
-                            "HTTPS", 
-                            "SOCKS"
-                        ], 
                         "type": "string"
                     }, 
                     "type": "array"
@@ -10458,17 +10452,6 @@
         }, 
         "cluster_type": {
             "items": {
-                "default": "NDFS", 
-                "enum": [
-                    "NDFS", 
-                    "MULTI_CLUSTER", 
-                    "CLOUD_DATA_GATEWAY", 
-                    "AVM", 
-                    "MINERVA", 
-                    "WITNESS_VM", 
-                    "EXTENSION_STORE_VM", 
-                    "XI_VM"
-                ], 
                 "type": "string"
             }, 
             "type": "array", 
